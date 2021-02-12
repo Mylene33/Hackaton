@@ -1,6 +1,7 @@
 import React from 'react'
 import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks } from './NavBarElements'
 import { FaBars } from 'react-icons/fa';
+import logo from './logo.png'
 
 const NavBar = ({toggle}) => {
     return (
@@ -8,7 +9,8 @@ const NavBar = ({toggle}) => {
             <Nav>
                 <NavBarContainer>
                     <NavLogo to='/'> 
-                       <h1>giveThemAVoice</h1>
+                       <img src={logo} alt="logo" style={{marginRight:'30px',width: '70px', borderRadius: '5px'}}/>
+                       <h1>Ran'Don</h1>
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
@@ -21,12 +23,12 @@ const NavBar = ({toggle}) => {
                         </NavItem>
                         <NavItem>
                             <NavLinks to='/about'>
-                                About Us
+                                About us
                             </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to='/contact'>
-                                CONTACT
+                                Contact
                             </NavLinks>
                         </NavItem>
                     </NavMenu>
