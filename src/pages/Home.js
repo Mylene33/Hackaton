@@ -11,13 +11,15 @@ const Home  = () => {
     }
     return (
         <>
+        <div>
            <SideBar isOpen={isOpen} toggle={toggle}/>
            <NavBar toggle={toggle}/> 
            <h1>Home</h1>
 
            <GetACharity />
+        </div>
         </>
     )
 }
 
-export default Home 
+export default Home;
