@@ -16,7 +16,8 @@ const Home  = () => {
            <NavBar toggle={toggle}/> 
            <h1>You want to donate for a good case but don't know which one ? Ran'don is here to back you up !</h1>
 
-           <GetACharity />
+           <GetACharity/>
+
         </div>
         </>
     )
