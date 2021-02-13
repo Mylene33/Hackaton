@@ -9,8 +9,8 @@ const NavBar = ({toggle}) => {
             <Nav>
                 <NavBarContainer>
                     <NavLogo to='/'> 
-                       <img src={logo} alt="logo" style={{marginRight:'30px',width: '70px', borderRadius: '5px'}}/>
-                       <h1>Ran'Don</h1>
+                       <img src={logo} alt="logo" style={{marginRight:'5px',width: '30px'}}/>
+                       <h1>RAN'DON</h1>
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
@@ -18,7 +18,7 @@ const NavBar = ({toggle}) => {
                     <NavMenu>
                         <NavItem>
                             <NavLinks className="menu" to='/'>
-                                Home
+                                Find a Charity
                             </NavLinks>
                         </NavItem>
                         <NavItem>

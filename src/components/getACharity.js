@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 import Card from '@material-ui/core/Card';
@@ -18,8 +19,9 @@ const useStyles = makeStyles({
       height: 140,
     },
   });
-
+ 
 const GetACharity = () => {
+
     const classes = useStyles();
 
 
@@ -39,41 +41,53 @@ const GetACharity = () => {
 
     return (
         <>
+          <div id="slogan">
+            <h2>You want to donate for a good case but don't know which one ? </h2>
+            <h3>Ran'don is here to back you up !</h3>
+          </div>
+
             <div className="ContainerButton">
                 <button id="RandomButton" onClick={()=>handleClick()}>Click to help a good cause</button>
             </div>
 
-            <div>
+            <div className="ContainerResult">
             {
                   charity != null &&
                     <>
-                          <Card>
-                            <CardActionArea>
-                            <CardMedia
-                                className={classes.media}
-                                image={charity.image}
-                                title="Contemplative Reptile"
-                            />
-                            <CardContent>
-                              <Typography gutterBottom variant="h5" component="h2">
-                                <h1>{charity.name}</h1>
-                              </Typography>
-                                  <Typography variant="body2" color="textSecondary" component="p">
-                                  {charity.description}
-                                  </Typography>
-                            </CardContent>
-                          </CardActionArea>
+                      <Card id="result" >
+                        <CardActionArea>
 
-                          <CardActions>
-                            <Button size="small" color="primary">
-                              Share
-                            </Button>
-                              <Button size="small" color="primary">
-                                  {charity.url}
-                              </Button>
-                          </CardActions>
-                          </Card>
-                            
+                          <CardMedia
+                              id="charityImage"
+                              className={classes.media}
+                              image={charity.image}
+                              title={charity.name}/>
+
+                          <CardContent>
+                            <Typography gutterBottom component="h3">
+                              <h3 id="charityName">{charity.name}</h3>
+                            </Typography>
+                            <h4>What they do:</h4>
+                            <Typography id="charityDescription" variant="body2" color="textSecondary" component="p">
+                              {charity.description}
+                            </Typography>
+                            <h4>What you do by donating:</h4>
+                            <Typography id="charityDescription" variant="body2" color="textSecondary" component="p">
+                              {charity.description}
+                            </Typography>
+                          </CardContent>
+
+                        </CardActionArea>
+
+                        <CardActions>
+
+                          <Button size="small" color="primary">
+                            {charity.url}
+                          </Button>
+
+                        </CardActions>
+
+                      </Card>
         </>
     }
             </div>

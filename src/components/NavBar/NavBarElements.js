@@ -2,9 +2,8 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
-    background: black;
+    background: white;
     height: 80px;
-    //margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,7 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 10;
 
-    @media screen and (max-width: 960px){
+    @media screen and (max-width: 768px){
         transition:0.8s all-ease;
 
     }
@@ -31,7 +30,7 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavLogo = styled(Link)`
-    color: #fff;
+    color: #67E8C4;
     cursor: pointer;
     justify-self: flex-start;
     font-size: 1rem;
@@ -53,7 +52,7 @@ export const MobileIcon = styled.div`
         transform:translate(-100%, 70%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;
+        color: #67E8C4;
     }
  `;
 
@@ -75,7 +74,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
-    color: #fff;
+    color: #67E8C4;
     display: flex;
     justify-content:center;
     align-items: center; 

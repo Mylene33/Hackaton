@@ -12,8 +12,9 @@
 } */
 
 h1 {
-  color: #7BF4DC;
+  color: #67E8C4;
   font-family: 'Abril Fatface', cursive;
+  font-size: 2em;
 }
 
 p{
@@ -32,13 +33,26 @@ p{
 
 .menu{
   font-family: 'Abril Fatface', cursive;
-  color: #7BF4DC;
-  text-decoration: none;
+  font-size: 2em;
 }
 
 
 
-/*---------Hero section---------*/
+/*---------Random---------*/
+
+#slogan{
+  margin-top: 30px;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+h3{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2em;
+}
 
 .ContainerButton{
   display: flex;
@@ -46,25 +60,69 @@ p{
 
 #RandomButton{
   width:80%;
-  height: 40px;
+  height: 50px;
   font-family: 'Abril Fatface', cursive;
-  font-size: 1em;
-  background-color: #7BF4DC;
-  color: #2E6359;
+  font-size: 1.2em;
+  background-color: #67E8C4;
+  color: white;
   border-radius: 10px;
   border:none;
-  margin:40px auto;
+  margin:auto;
 }
-
 
 #RandomButton:hover{
   cursor: pointer;
 }
 
-#RandomButton:{
-  cursor: pointer;
+
+/*---------Card---------*/
+
+#result{
+  width: 70%;
 }
 
+.ContainerResult{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#charityImage{
+  height: 100px;
+  width: auto;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#charityName{
+  font-size: 1.5em !important;
+  color: #67E8C4;
+  text-align: center;
+}
+
+h4{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.1em;
+  font-style: bold;
+}
+
+#charityDescription{
+  font-family: 'Montserrat', sans-serif !important;
+  color: black;
+}
+
+
+.MuiPaper-elevation1{
+  box-shadow: 
+  0px 2px 1px -1px #67E8C4, 
+  0px 1px 1px 0px #67E8C4, 
+  0px 1px 3px 0px #67E8C4;
+}
 
 
 
