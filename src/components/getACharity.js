@@ -63,7 +63,7 @@ const GetACharity = () => {
             
         
         <>
-          <div id="slogan">
+          <div className="slogan">
             <h2>You want to donate for a good cause but don't know which one ? </h2>
             <h3>RAN'DON is here to back you up and do the search for you !</h3>
           </div>
@@ -97,7 +97,7 @@ const GetACharity = () => {
                               title={charity.name}/>
                           
                           <CardActions id="containerButton">
-                          <a href={charity.url}>
+                          <a href={charity.url} target='_blank'>
                               <Button id="buttonLinkTop">DONATE NOW</Button>
                             </a>
                           </CardActions>
