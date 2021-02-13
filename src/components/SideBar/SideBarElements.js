@@ -7,7 +7,7 @@ export const SideBarContainer = styled.aside`
     z-index: 999;
     width: 100%;
     height: 100%;
-    background: black;
+    background: #67E8C4;
     display: grid;
     align-items: center;
     top: 0;
@@ -53,5 +53,7 @@ export const SideBarLink = styled(Link)`
     transition: 0.2s ease-in-out;
     color: #fff;
     cursor: pointer;
+    font-family: 'Abril Fatface', cursive;
+
 
 `

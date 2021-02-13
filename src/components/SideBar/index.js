@@ -17,13 +17,13 @@ const SideBar = ({isOpen, toggle}) => {
             <SideBarWrapper>
                 <SideBarMenu>
                     <SideBarLink to='/' onClick={toggle}>
-                        Home
+                    Find a Charity
                     </SideBarLink>
                     <SideBarLink to='/about' onClick={toggle}>
-                        About us
+                    What is RAN'DON?
                     </SideBarLink>
                     <SideBarLink to='/contact' onClick={toggle}>
-                        Contact
+                    Contact Us
                     </SideBarLink>
                     
                 </SideBarMenu>
