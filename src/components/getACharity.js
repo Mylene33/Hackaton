@@ -8,31 +8,27 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const getACharity = () => {
+const GetACharity = () => {
 
   const [charity, setCharity] = useState(null); 
   const [random, setRandom] = useState(null); 
 
- const min = 0;
- const max = 19;
+  const min = 0;
+  const max = 19;
 
-  function handleClick(){
+  function handleClick(event){
     setRandom({random: min + Math.floor((Math.random() * (max - min)))});
     fetch("https://hackaton-1d230-default-rtdb.europe-west1.firebasedatabase.app//charities/"+random+".json")
       .then((resp) => resp.json())
-      .then((data) => setCharity({ charity: data }))
+      .then((data) => setCharity({charity : data}))
   };
 
-  useEffect(() => {
-    handleClick()
-  }, [charity]);
 
   return (
-    <div>
         <>
 
             <div>
-                <button onClick={handleClick()}>Click me</button>
+                <button onClick={(event) => handleCharity(event)}>Click me</button>
                 {random}
             </div>
 
@@ -67,15 +63,13 @@ const getACharity = () => {
                           </CardActions>
                           </Card>
                             
-        </>
-    }
-</>
-      
-    </div>
+                        </>
+                }
+          </>
   )
 }
 
-export default getACharity
+export default GetACharity;
 
 
 
