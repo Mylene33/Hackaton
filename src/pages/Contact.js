@@ -67,16 +67,23 @@ const Contact = () => {
                     <div className={classes.margin}>
                         <Grid container spacing={1} alignItems="flex-end">
                             <Grid item>
-                            <EmailIcon/>
-                                </Grid>
-                                    <Grid item>
-                                        <TextField id="input-with-icon-grid" label="email adress" />
-                                </Grid>
-                                <InputLabel container spacing={1} flexDirection = "column" alignItems="flex-end" htmlFor="select">Are you a charity or a donator? </InputLabel>
-                                    <NativeSelect container id="select">
-                                        <option>charity</option>
-                                        <option>donator</option>
-                                    </NativeSelect>
+                                <EmailIcon/>
+                            </Grid>
+                            <Grid item>
+                                <TextField id="input-with-icon-grid" label="email adress" />
+                            </Grid>
+                            </Grid>
+                            <Grid container alignItems="center">
+                            <InputLabel container spacing={1} 
+                                flexDirection = "column" 
+                                alignItems="flex-end" 
+                                htmlFor="select" 
+                                id="textInput">Are you a charity or a donator? 
+                            </InputLabel>
+                            <NativeSelect container id="select">
+                                <option>charity</option>
+                                <option>donator</option>
+                            </NativeSelect>
                             </Grid>
 
                         <div>
