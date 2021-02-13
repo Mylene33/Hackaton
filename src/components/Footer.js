@@ -1,10 +1,9 @@
 import React from 'react'
-import logo from './NavBar/logo.png'
 
 const Footer = () => {
     return (
         <div className='footer'>
-            <img className='logo-footer'src={logo}/>
+            <p className='copyright'>© Mylène, Yousra et Tom</p>
         </div>
     )
 }

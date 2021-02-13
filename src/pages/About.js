@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import SideBar from '../components/SideBar'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+
 
 import idea from '../image/idea.png'
 import team1 from '../image/team1.png'
@@ -51,7 +53,8 @@ const About = () => {
             </div>
             
             
-            
+            <Footer />
+
             
         </div>
     )

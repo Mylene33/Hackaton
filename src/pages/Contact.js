@@ -3,6 +3,18 @@ import SideBar from '../components/SideBar'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 
+import Lottie from 'react-lottie';
+import animationData from '../contactus.json'; 
+
+const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
 
 const Contact = () => {
 
@@ -19,8 +31,19 @@ const Contact = () => {
             <NavBar toggle={toggle}/> 
 
             <h2 className='contact'>If you have any question or the intention to be part of the RAN'DON team, please contact us. Cheers ! </h2>
-            <a className='link' href="mailto:info@randon.com">info@randon.com</a> 
-            <Footer/>           
+
+            <a className='link' href="mailto:info@randon.com">info@randon.com</a>
+
+            <div>
+                  <Lottie 
+                  options={defaultOptions}
+                  height={300}
+                  width={300}
+                  />
+                  <Footer />
+            </div>
+
+
         </div>
     )
 }
