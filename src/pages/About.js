@@ -20,7 +20,7 @@ const About = () => {
             <NavBar toggle={toggle}/> 
             
             
-            <div className="ContainerAbout">
+            <div className="ContainerAboutTop">
                 <img id="imageAbout" src={idea}/>
                 <div id="testAbout">
                     <h3 id="titleAbout">
@@ -36,7 +36,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="ContainerAbout">
+            <div className="ContainerAboutBottom">
                 <div id="testAbout">
                     <h3 id="titleAbout">
                     What is RAN'DON?

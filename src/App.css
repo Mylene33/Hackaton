@@ -21,17 +21,37 @@ h1 {
         /*---------Intro---------*/
 
 #slogan{
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: 15%;
   margin-right: 15%;
-  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 50px;
   text-align: center;
-  font-size: 0.7em;
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
 }
 
 h3{
   font-family: 'Abril Fatface', cursive;
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px){
+  
+  #slogan{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  h2{
+    font-size: 1.2em;
+  }
+
+  h3{
+    font-size: 1.2em;
+  }
 }
 
         /*---------Button Random---------*/
@@ -41,10 +61,10 @@ h3{
 }
 
 #RandomButton{
-  width:80%;
-  height: 50px;
+  width:70%;
+  height: 60px;
   font-family: 'Abril Fatface', cursive;
-  font-size: 1.2em;
+  font-size: 1.5em;
   background-color: #67E8C4;
   color: white;
   border-radius: 10px;
@@ -84,11 +104,19 @@ h3{
   outline:none;
 }
 
+@media screen and (max-width: 768px){
+  
+  #RandomButton{
+    font-size: 1.2em;
+  }
+}
+
 
         /*---------Random Result - CARD---------*/
 
 #result{
   width: 70%;
+  margin-bottom: 50px;
 }
 
 .ContainerResult{
@@ -103,14 +131,12 @@ h3{
 
 
 #charityImage{
-  height: 200px;
-  max-width: 100%;
+  background-size: contain;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-img{
-  max-width: 100%;
-  max-height: 100%;
-}
 
         /*---------button link charity CARD---------*/
 
@@ -119,56 +145,63 @@ img{
   margin-top: 20px;
 }
 
+#containerButton a{
+  text-decoration: none;
+  width: 80%;
+  margin:auto;
+  }
+
 #buttonLinkTop{
-  background-color: #67E8C4;
   width: 100%;
   height: 50px;
-  font-family: 'Montserrat', sans-serif !important;
-  font-style: bold;
-  font-size: 1em;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.2em;
   background-color: #67E8C4;
   color: white;
   border-radius: 10px;
   border:none;
-  margin:auto;
 }
 
 #buttonLinkBottom{
-  background-color: #67E8C4;
   width: 100%;
   height: 50px;
-  font-family: 'Montserrat', sans-serif !important;
-  font-style: bold;
-  font-size: 1em;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.2em;
   background-color: #67E8C4;
   color: white;
   border-radius: 10px;
   border:none;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
+
 
 
         /*---------charity info---------*/
 
+
+#TextContent{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
 #charityName{
   font-size: 2em !important;
-  color: #67E8C4;
-  text-align: center;
+  color: black;
   text-transform: uppercase ;
   margin-top:0;
 }
 
 h4{
   font-family: 'Abril Fatface', cursive;
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-style: bold;
 }
 
 #charityDescription{
   font-family: 'Montserrat', sans-serif !important;
+  line-height: 1.8em;
   color: black;
 }
-
 
 
 /*---------Footer---------*/
@@ -182,7 +215,17 @@ h4{
 
 /*---------About---------*/
 
-.ContainerAbout{
+.ContainerAboutTop{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top:50px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.ContainerAboutBottom{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -208,3 +251,23 @@ h4{
   font-size: 1em;
   line-height: 2em;
 }
+
+
+@media screen and (max-width: 768px){
+  
+  .ContainerAboutTop{
+    flex-direction: column;
+    margin-top:40px;
+  }
+
+  .ContainerAboutBottom{
+    flex-direction: column-reverse;
+    margin-top:40px;
+  }
+
+  #imageAbout{
+    height: 150px;
+  }
+}
+
+

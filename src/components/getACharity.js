@@ -64,8 +64,8 @@ const GetACharity = () => {
         
         <>
           <div id="slogan">
-            <h2>You want to donate for a good case but don't know which one ? </h2>
-            <h3>Ran'don is here to back you up !</h3>
+            <h2>You want to donate for a good cause but don't know which one ? </h2>
+            <h3>RAN'DON is here to back you up and do the search for you !</h3>
           </div>
 
             <div className="ContainerButton">
@@ -77,8 +77,8 @@ const GetACharity = () => {
               <div>
                   <Lottie 
                   options={defaultOptions}
-                  height={200}
-                  width={200}
+                  height={300}
+                  width={300}
                   />
               </div>
           }
@@ -97,12 +97,12 @@ const GetACharity = () => {
                               title={charity.name}/>
                           
                           <CardActions id="containerButton">
-                          <Button size="small" id="buttonLinkTop">
-                            {charity.url}
-                          </Button>
+                          <a href={charity.url}>
+                              <Button id="buttonLinkTop">DONATE NOW</Button>
+                            </a>
                           </CardActions>
 
-                          <CardContent>
+                          <CardContent id="TextContent">
                             <Typography gutterBottom component="h3">
                               <h3 id="charityName">{charity.name}</h3>
                             </Typography>
@@ -110,16 +110,16 @@ const GetACharity = () => {
                             <Typography id="charityDescription" variant="body2" color="textSecondary" component="p">
                               {charity.description}
                             </Typography>
-                            <h4>What you do by donating:</h4>
+                            <h4>How your money will help them:</h4>
                             <Typography id="charityDescription" variant="body2" color="textSecondary" component="p">
-                              {charity.description}
+                              {charity.what}
                             </Typography>
                           </CardContent>
 
                           <CardActions id="containerButton">
-                          <Button size="small" id="buttonLinkBottom">
-                            {charity.url}
-                          </Button>
+                            <a href={charity.url}>
+                              <Button id="buttonLinkBottom">DONATE NOW</Button>
+                            </a>
                           </CardActions>
 
                         </CardActionArea>
