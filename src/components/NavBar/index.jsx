@@ -23,12 +23,12 @@ const NavBar = ({toggle}) => {
                         </NavItem>
                         <NavItem>
                             <NavLinks className="menu" to='/about'>
-                                About us
+                                What is RAN'DON?
                             </NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks className="menu" to='/contact'>
-                                Contact
+                                Contact Us
                             </NavLinks>
                         </NavItem>
                     </NavMenu>

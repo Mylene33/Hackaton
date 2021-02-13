@@ -38,8 +38,10 @@ const GetACharity = () => {
 
 
     const [charity, setCharity] = useState(null);
+    const [randomText, setrandomText] = useState("Click to help a good cause");
+    const [loading, setLoading] = useState(true);
 
-    const [loading, setLoading] = useState(false);
+
 
     const min = 0;
     const max = 19;
@@ -47,26 +49,18 @@ const GetACharity = () => {
     
 
     function handleClick(){
-        setLoading(true)
         let random = min + Math.floor((Math.random() * (max - min)));
         fetch("https://hackaton-1d230-default-rtdb.europe-west1.firebasedatabase.app//charities/"+random+".json")
             .then((resp) => resp.json())
             .then((data) => setCharity(data));
+        setLoading(false);
+        setrandomText("Not your thing? Click again!")
     }
 
 
     return (
          <> 
-            {
-              loading == true &&
-              <div>
-                  <Lottie 
-                  options={defaultOptions}
-                  height={400}
-                  width={400}
-                  />
-              </div>
-          }
+            
         
         <>
           <div id="slogan">
@@ -75,8 +69,19 @@ const GetACharity = () => {
           </div>
 
             <div className="ContainerButton">
-                <button id="RandomButton" onClick={()=>handleClick()}>Click to help a good cause</button>
+                <button id="RandomButton" onClick={()=>handleClick()}>{randomText}</button>
             </div>
+
+            {
+              loading == true &&
+              <div>
+                  <Lottie 
+                  options={defaultOptions}
+                  height={200}
+                  width={200}
+                  />
+              </div>
+          }
 
             <div className="ContainerResult">
             {
@@ -90,6 +95,12 @@ const GetACharity = () => {
                               className={classes.media}
                               image={charity.image}
                               title={charity.name}/>
+                          
+                          <CardActions id="containerButton">
+                          <Button size="small" id="buttonLinkTop">
+                            {charity.url}
+                          </Button>
+                          </CardActions>
 
                           <CardContent>
                             <Typography gutterBottom component="h3">
@@ -105,15 +116,13 @@ const GetACharity = () => {
                             </Typography>
                           </CardContent>
 
-                        </CardActionArea>
-
-                        <CardActions>
-
-                          <Button size="small" color="primary">
+                          <CardActions id="containerButton">
+                          <Button size="small" id="buttonLinkBottom">
                             {charity.url}
                           </Button>
+                          </CardActions>
 
-                        </CardActions>
+                        </CardActionArea>
 
                       </Card>
         </>
