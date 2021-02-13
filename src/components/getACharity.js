@@ -40,6 +40,7 @@ class GetACharity extends Component {
                   <img 
                     src={this.state.charity.image}
                 />
+                <p>{this.state.charity.name}</p>
                 </>
             }
         </>
