@@ -233,7 +233,20 @@ h4 {
 }
 
 /*---------Footer---------*/
-
+.footer {
+  /* display: flex; */
+  position: absolute;
+  background-color: #67e8c4;
+  width: 100%;
+  height: auto;
+}
+.logo-footer {
+  display: flex;
+  position: relative;
+  margin-left: 200px;
+  width: 70px;
+  height: auto;
+}
 /*---------About---------*/
 
 .ContainerAboutTop {
