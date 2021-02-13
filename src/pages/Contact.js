@@ -9,8 +9,11 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
+
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import EmailIcon from '@material-ui/icons/Email';
+
+import NativeSelect from '@material-ui/core/NativeSelect';
 
 
 
@@ -69,10 +72,31 @@ const Contact = () => {
                                     <Grid item>
                                         <TextField id="input-with-icon-grid" label="email adress" />
                                 </Grid>
+                                <InputLabel container spacing={1} flexDirection = "column" alignItems="flex-end" htmlFor="select">Are you a charity or a donator? </InputLabel>
+                                    <NativeSelect container id="select">
+                                        <option>charity</option>
+                                        <option>donator</option>
+                                    </NativeSelect>
                             </Grid>
+
+                        <div>
+                        <TextField
+                            id="outlined-multiline-static"
+                            label="Questions?"
+                            multiline
+                            rows={10}
+                            defaultValue="..."
+                            variant="outlined"
+                        />
+                        </div>
                     </div>
+                   
                     </div>
-                    </div>
+
+                    
+        </div>
+
+
     )
 }
 
