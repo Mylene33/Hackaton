@@ -11,6 +11,18 @@ import Typography from '@material-ui/core/Typography';
 
 import { makeStyles } from '@material-ui/core/styles';
 
+import Lottie from 'react-lottie';
+import animationData from '../donate.json'; 
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+  preserveAspectRatio: "xMidYMid slice"
+  }
+};
+
 const useStyles = makeStyles({
     root: {
       maxWidth: 345,
@@ -26,13 +38,17 @@ const GetACharity = () => {
 
 
     const [charity, setCharity] = useState(null);
-    const [random, setRandom] = useState(null);
+
+    const [loading, setLoading] = useState(false);
 
     const min = 0;
     const max = 19;
 
+    
+
     function handleClick(){
-        setRandom(min + Math.floor((Math.random() * (max - min))));
+        setLoading(true)
+        let random = min + Math.floor((Math.random() * (max - min)));
         fetch("https://hackaton-1d230-default-rtdb.europe-west1.firebasedatabase.app//charities/"+random+".json")
             .then((resp) => resp.json())
             .then((data) => setCharity(data));
@@ -40,6 +56,18 @@ const GetACharity = () => {
 
 
     return (
+         <> 
+            {
+              loading == true &&
+              <div>
+                  <Lottie 
+                  options={defaultOptions}
+                  height={400}
+                  width={400}
+                  />
+              </div>
+          }
+        
         <>
           <div id="slogan">
             <h2>You want to donate for a good case but don't know which one ? </h2>
@@ -91,6 +119,7 @@ const GetACharity = () => {
         </>
     }
             </div>
+        </>
         </>
     )
 }
