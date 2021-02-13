@@ -14,7 +14,7 @@ const Home  = () => {
         <div>
            <SideBar isOpen={isOpen} toggle={toggle}/>
            <NavBar toggle={toggle}/> 
-           <h1>Home</h1>
+           <h1>You want to donate for a good case but don't know which one ? Ran'don is here to back you up !</h1>
 
            <GetACharity/>
 

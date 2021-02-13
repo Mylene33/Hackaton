@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 import Card from '@material-ui/core/Card';
@@ -21,8 +22,9 @@ const useStyles = makeStyles({
       height: 140,
     },
   });
-
+ 
 const GetACharity = () => {
+
     const classes = useStyles();
 
 
@@ -64,6 +66,7 @@ const GetACharity = () => {
         
         <>
             <div>
+
                 <button onClick={()=>handleClick()}>GO</button>
                 {random}
             </div>
