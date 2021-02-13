@@ -40,6 +40,30 @@ p{
 
 /*---------Hero section---------*/
 
+.ContainerButton{
+  display: flex;
+}
+
+#RandomButton{
+  width:80%;
+  height: 40px;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1em;
+  background-color: #7BF4DC;
+  color: #2E6359;
+  border-radius: 10px;
+  border:none;
+  margin:40px auto;
+}
+
+
+#RandomButton:hover{
+  cursor: pointer;
+}
+
+#RandomButton:{
+  cursor: pointer;
+}
 
 
 

@@ -39,9 +39,8 @@ const GetACharity = () => {
 
     return (
         <>
-            <div>
-                <button onClick={()=>handleClick()}>GO</button>
-                {random}
+            <div className="ContainerButton">
+                <button id="RandomButton" onClick={()=>handleClick()}>Click to help a good cause</button>
             </div>
 
             <div>
