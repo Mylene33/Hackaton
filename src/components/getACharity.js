@@ -12,7 +12,16 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Lottie from 'react-lottie';
-import animationData from '../8863-waiting.json'; 
+import animationData from '../donate.json'; 
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+  preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 const useStyles = makeStyles({
     root: {
@@ -36,17 +45,10 @@ const GetACharity = () => {
     const min = 0;
     const max = 19;
 
-    const defaultOptions = {
-      loop: true,
-      autoplay: true, 
-      animationData: animationData,
-      rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-      },
-    }
+    
 
     function handleClick(){
-        setLoading({loading : true})
+        setLoading(true)
         setRandom(min + Math.floor((Math.random() * (max - min))));
         fetch("https://hackaton-1d230-default-rtdb.europe-west1.firebasedatabase.app//charities/"+random+".json")
             .then((resp) => resp.json())
@@ -58,10 +60,13 @@ const GetACharity = () => {
          <> 
             {
               loading == true &&
-              <Lottie options={defaultOptions}
-                   height={400}
-                   width={400}
-                   />
+              <div>
+                  <Lottie 
+                  options={defaultOptions}
+                  height={400}
+                  width={400}
+                  />
+              </div>
           }
         
         <>
