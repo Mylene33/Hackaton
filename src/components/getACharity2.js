@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     },
   });
 
-const GetACharity = () => {
+const GetACharity2 = () => {
     const classes = useStyles();
 
 
@@ -82,4 +82,4 @@ const GetACharity = () => {
     )
 }
 
-export default GetACharity;
+export default GetACharity2;

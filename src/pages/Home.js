@@ -16,7 +16,8 @@ const Home  = () => {
            <NavBar toggle={toggle}/> 
            <h1>Home</h1>
 
-           <GetACharity />
+           <GetACharity/>
+
         </div>
         </>
     )
