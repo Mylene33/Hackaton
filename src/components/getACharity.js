@@ -38,9 +38,8 @@ const GetACharity = () => {
 
 
     const [charity, setCharity] = useState(null);
-    const [random, setRandom] = useState(null);
 
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     const min = 0;
     const max = 19;
@@ -49,10 +48,12 @@ const GetACharity = () => {
 
     function handleClick(){
         setLoading(true)
-        setRandom(min + Math.floor((Math.random() * (max - min))));
+        let random = min + Math.floor((Math.random() * (max - min)));
         fetch("https://hackaton-1d230-default-rtdb.europe-west1.firebasedatabase.app//charities/"+random+".json")
             .then((resp) => resp.json())
             .then((data) => setCharity(data));
+
+
     }
 
 
@@ -73,7 +74,7 @@ const GetACharity = () => {
             <div>
 
                 <button onClick={()=>handleClick()}>GO</button>
-                {random}
+               
             </div>
 
             <div>
