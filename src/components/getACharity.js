@@ -29,7 +29,7 @@ const useStyles = makeStyles({
     },
     media: {
       height: 140,
-    },
+    }
   });
  
 const GetACharity = () => {
@@ -101,7 +101,7 @@ const GetACharity = () => {
                             </Typography>
                             <h4>What you do by donating:</h4>
                             <Typography id="charityDescription" variant="body2" color="textSecondary" component="p">
-                              {charity.description}
+                              {charity.what}
                             </Typography>
                           </CardContent>
 
