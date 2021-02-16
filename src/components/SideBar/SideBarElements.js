@@ -45,7 +45,8 @@ export const SideBarMenu = styled.ul`
 export const SideBarLink = styled(Link)`
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin-right:40px;
+    justify-content:center;
     margin-top: 100px;
     font-size: 2rem;
     text-decoration: none;
