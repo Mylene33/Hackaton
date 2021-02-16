@@ -335,6 +335,7 @@ h4 {
 /*---------Contact---------*/
 
 .title-wip{
+  margin-top: 50px;
   display: flex;
   font-family: "Montserrat", sans-serif;
   font-size: 2em;
@@ -370,3 +371,4 @@ h4 {
     text-align: center;
   }
 }
+

@@ -11,9 +11,9 @@ const defaultOptions = {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
+        preserveAspectRatio: "xMidYMid slice"
     }
-  };
+};
 
 const WorkInProgress = () => {
 
@@ -31,13 +31,13 @@ const WorkInProgress = () => {
                 <h1 className='title-wip'>Oops 👼  this page is currently under construction</h1>
                 <h2 className='subtitle-wip'>Please come back later</h2>
 
-                <Lottie 
-                  options={defaultOptions}
-                  height={350}
-                  width={350}
-                  />
+                <Lottie
+                    options={defaultOptions}
+                    height={350}
+                    width={350}
+                />
             </div>
-            <Footer />
+            <Footer className='footer-wip' />
         </>
     )
 }
