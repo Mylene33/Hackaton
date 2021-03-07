@@ -3,6 +3,6 @@ See the app here: https://hackathon-randon.web.app
 
 
 Collaborators are:
-- Tom Serrel
+- Tom Serrell
 - Yousra Miloudi
 - Mylene Carrara
