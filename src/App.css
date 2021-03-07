@@ -32,12 +32,12 @@ h1 {
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 h3 {
   font-family: "Abril Fatface", cursive;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 @media screen and (max-width: 768px) {
